@@ -14,7 +14,7 @@ function Hero() {
           </p>
 
           <h1>
-            Prabhani
+            Prabhanii
             <span> Herath</span>
           </h1>
 
