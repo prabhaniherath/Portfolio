@@ -1181,3 +1181,15 @@ button {
     display: none;
   }
 }
+
+.project-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.project-link:hover {
+  transform: translateX(5px);
+}

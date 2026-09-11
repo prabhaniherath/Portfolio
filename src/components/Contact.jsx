@@ -28,7 +28,7 @@ function Contact() {
           <div className="contact-cards">
 
             <a
-              href="mailto:prabhanimadhubhashini@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
               className="contact-card"
             >
               <div className="contact-icon">✉</div>

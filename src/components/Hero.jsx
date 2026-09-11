@@ -50,7 +50,7 @@ function Hero() {
           <div className="social-links">
 
             <a
-              href="https://github.com/"
+              href="https://github.com/prabhaniherath/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -67,12 +67,14 @@ function Hero() {
               LinkedIn
             </a>
 
-            <a
-              href="mailto:prabhanimadhubhashini@gmail.com"
+           <a
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
+             target="_blank"
+              rel="noopener noreferrer"
               aria-label="Email"
-            >
+              >
               Email
-            </a>
+              </a>
 
           </div>
 

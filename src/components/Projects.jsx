@@ -14,6 +14,7 @@ const projects = [
       "Sales monitoring",
     ],
     technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+     link: "https://github.com/prabhaniherath/Pharmacy-Management-System-",
   },
 
   {
@@ -30,6 +31,7 @@ const projects = [
       "Diabetes risk prediction",
     ],
     technologies: ["Python", "Pandas", "Scikit-learn", "Jupyter Notebook"],
+     link: "https://github.com/prabhaniherath/Guardian-AI-Diabetes-Prediction-System",
   },
 
   {
@@ -110,6 +112,17 @@ function Projects() {
                 ))}
 
               </div>
+
+              {project.link && (
+                        <a
+                       href={project.link}
+                               target="_blank"
+                           rel="noopener noreferrer"
+                          className="project-link"
+                                  >
+                            View Project →
+                              </a>
+                                    )}
 
             </article>
           ))}
