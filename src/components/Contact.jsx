@@ -28,9 +28,11 @@ function Contact() {
           <div className="contact-cards">
 
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
-              className="contact-card"
-            >
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card"
+                      >
               <div className="contact-icon">✉</div>
 
               <div>
