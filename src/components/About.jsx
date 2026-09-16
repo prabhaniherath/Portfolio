@@ -5,7 +5,7 @@ function About() {
       <div className="container">
 
         <div className="section-heading">
-          <p className="section-label">ABOUT ME</p>
+          <p className="section-label">ABOUT MEE</p>
           <h2>
             Turning ideas into
             <span> digital solutions.</span>
