@@ -22,14 +22,7 @@ function Navbar() {
     <nav className="fixed left-0 top-0 z-[1000] w-full border-b border-[var(--border)] bg-[rgba(8,9,13,0.8)] backdrop-blur-[16px]">
       <div className="mx-auto flex h-[75px] w-[92%] max-w-[1180px] items-center justify-between">
 
-        {/* Logo */}
-        <a
-          href="#home"
-          className="font-['Space_Grotesk'] text-2xl font-bold text-[var(--text)]"
-          onClick={closeMenu}
-        >
-          PH
-        </a>
+       
 
         {/* Desktop and Mobile Navigation */}
         <ul
