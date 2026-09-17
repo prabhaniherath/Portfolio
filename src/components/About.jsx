@@ -5,7 +5,8 @@ function About() {
       id="about"
     >
       {/* SAME CONTAINER AS HERO */}
-     <div className="w-[min(90%,1180px)] mx-auto">
+     <div className="mx-auto w-[90%] max-w-[1180px]">
+     
 
         {/* Section Heading */}
         <div className="max-w-[750px] mb-[60px]">
@@ -25,25 +26,25 @@ function About() {
 
 
         {/* About Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
+       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Text */}
-          <div>
+        <div className="space-y-5">
 
-            <p className="text-[var(--text-light)] mb-[20px]">
+            <p className="text-[var(--text-light)] ">
               I am a Software Engineering graduate with a Bachelor
               of Science (Hons) in Software Engineering, awarded with
               Second Class Honours (Upper Division).
             </p>
 
-            <p className="text-[var(--text-light)] mb-[20px]">
+            <p className="text-[var(--text-light)]">
               I have a strong foundation in software development,
               web technologies, database management and machine
               learning. I enjoy transforming ideas into practical
               software solutions through development and research.
             </p>
 
-            <p className="text-[var(--text-light)] mb-[20px]">
+            <p className="text-[var(--text-light)]">
               I am continuously learning new technologies and looking
               for opportunities where I can contribute my technical
               knowledge, problem-solving skills and creativity.
