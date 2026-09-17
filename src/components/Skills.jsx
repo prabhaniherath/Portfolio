@@ -1,3 +1,4 @@
+
 const skillGroups = [
   {
     title: "Programming",
@@ -27,43 +28,57 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section className="section skills-section" id="skills">
+    <section
+      className="bg-[var(--bg-light)] py-[110px]"
+      id="skills"
+    >
+      <div className="mx-auto w-[90%] max-w-[1180px]">
 
-      <div className="container">
+        {/* Section Heading */}
+        <div className="mx-auto mb-[50px] max-w-[700px] text-center">
 
-        <div className="section-heading center">
-
-          <p className="section-label">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[3px] text-[var(--primary-light)]">
             MY EXPERTISE
           </p>
 
-          <h2>
-            Skills & <span>Technologies</span>
+          <h2 className="mb-5 text-3xl font-bold text-[var(--text)] md:text-4xl">
+            Skills &{" "}
+            <span className="text-[var(--primary-light)]">
+              Technologies
+            </span>
           </h2>
 
-          <p>
+          <p className="text-[var(--text-light)]">
             Technologies and tools I have worked with throughout
             my academic projects and software development journey.
           </p>
 
         </div>
 
-        <div className="skills-grid">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 
-          {skillGroups.map((group) => (            // skillGroups is the array containing all your skill group objects.
-                                                  // .map() goes through each object one by one.
-                                                 // "group" represents the current object.
-                                                 // For example, first group = { title: "Programming", skills: [...] }
-            <div className="skill-card" key={group.title}>
+          {skillGroups.map((group) => (
+            <div
+              className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-[30px] transition duration-300 hover:-translate-y-[5px] hover:border-[rgba(124,92,255,0.4)]"
+              key={group.title}
+            >
 
-              <div className="skill-card-top">
-                <h3>{group.title}</h3>
+              {/* Skill Group Title */}
+              <div className="mb-5">
+                <h3 className="text-lg font-semibold text-[var(--text)]">
+                  {group.title}
+                </h3>
               </div>
 
-              <div className="skill-list">
+              {/* Skill Tags */}
+              <div className="flex flex-wrap gap-2">
 
                 {group.skills.map((skill) => (
-                  <span className="skill-tag" key={skill}>
+                  <span
+                    className="rounded-md border border-[rgba(124,92,255,0.2)] bg-[rgba(124,92,255,0.1)] px-[11px] py-[7px] text-xs text-[#c4b5fd]"
+                    key={skill}
+                  >
                     {skill}
                   </span>
                 ))}
@@ -76,7 +91,6 @@ function Skills() {
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 :root {
   font-family: "Inter", sans-serif;
@@ -44,9 +45,15 @@ button {
   font-family: inherit;
 }
 
-.container {
-  width: min(90%, var(--max-width));
-  margin: auto;
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -428,67 +435,6 @@ button {
    ABOUT
 ========================= */
 
-.about {
-  background: var(--bg-light);
-}
-
-.about-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  align-items: center;
-}
-
-.about-text p {
-  color: var(--text-light);
-
-  margin-bottom: 20px;
-}
-
-.about-cards {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 15px;
-}
-
-.info-card {
-  padding: 25px;
-
-  background: var(--card);
-
-  border: 1px solid var(--border);
-
-  border-radius: 12px;
-
-  transition: 0.3s;
-}
-
-.info-card:hover {
-  background: var(--card-hover);
-
-  transform: translateY(-5px);
-}
-
-.info-icon {
-  font-size: 1.8rem;
-
-  margin-bottom: 15px;
-}
-
-.info-card h3 {
-  margin-bottom: 7px;
-}
-
-.info-card p {
-  color: var(--text-light);
-
-  font-size: 0.85rem;
-}
 
 /* =========================
    SKILLS
@@ -767,113 +713,11 @@ button {
    EDUCATION
 ========================= */
 
-.education-section {
-  background: var(--bg-light);
-}
 
-.timeline {
-  position: relative;
-
-  max-width: 900px;
-
-  margin: auto;
-}
-
-.timeline::before {
-  content: "";
-
-  position: absolute;
-
-  left: 130px;
-  top: 0;
-  bottom: 0;
-
-  width: 1px;
-
-  background: var(--border);
-}
-
-.timeline-item {
-  position: relative;
-
-  display: grid;
-
-  grid-template-columns: 110px 1fr;
-
-  gap: 45px;
-
-  padding-bottom: 50px;
-}
-
-.timeline-dot {
-  position: absolute;
-
-  left: 126px;
-  top: 5px;
-
-  width: 9px;
-  height: 9px;
-
-  background: var(--primary);
-
-  border-radius: 50%;
-
-  box-shadow: 0 0 0 5px rgba(124, 92, 255, 0.1);
-}
-
-.timeline-year {
-  color: var(--primary-light);
-
-  font-size: 0.8rem;
-  font-weight: 700;
-
-  text-align: right;
-}
-
-.timeline-content {
-  padding-left: 10px;
-}
-
-.timeline-content h3 {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 1.3rem;
-
-  margin-bottom: 7px;
-}
-
-.timeline-content p {
-  color: var(--text-light);
-
-  font-size: 0.88rem;
-}
-
-.timeline-content .institution {
-  color: #d4d5dc;
-
-  margin-bottom: 5px;
-}
-
-.result {
-  display: inline-block;
-
-  margin-top: 15px;
-
-  padding: 5px 10px;
-
-  background: rgba(124, 92, 255, 0.1);
-
-  color: var(--primary-light);
-
-  border-radius: 5px;
-
-  font-size: 0.75rem;
-}
 
 /* =========================
    CONTACT
 ========================= */
-
 .contact-wrapper {
   display: grid;
 
@@ -965,6 +809,7 @@ button {
 
   font-size: 0.85rem;
 }
+
 
 /* =========================
    FOOTER

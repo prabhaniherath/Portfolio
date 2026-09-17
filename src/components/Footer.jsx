@@ -1,34 +1,60 @@
+
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="border-t border-[var(--border)] py-10">
+      <div className="mx-auto flex w-[90%] max-w-[1180px] flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
 
-      <div className="container footer-container">
-
+        {/* Footer Logo and Description */}
         <div>
-          <a href="#home" className="footer-logo">
+          <a
+            href="#home"
+            className="font-['Space_Grotesk'] text-2xl font-bold text-[var(--text)] transition hover:text-[var(--primary-light)]"
+          >
             PH
           </a>
 
-          <p>
+          <p className="text-xs text-[var(--text-light)]">
             Software Engineering Graduate
           </p>
         </div>
 
-        <div className="footer-links">
+        {/* Footer Links */}
+        <div className="flex flex-wrap justify-center gap-5">
+          <a
+            href="#about"
+            className="text-xs text-[var(--text-light)] transition hover:text-white"
+          >
+            About
+          </a>
 
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a
+            href="#skills"
+            className="text-xs text-[var(--text-light)] transition hover:text-white"
+          >
+            Skills
+          </a>
 
+          <a
+            href="#projects"
+            className="text-xs text-[var(--text-light)] transition hover:text-white"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="text-xs text-[var(--text-light)] transition hover:text-white"
+          >
+            Contact
+          </a>
         </div>
 
-        <div className="copyright">
+        {/* Copyright */}
+        <div className="text-xs text-[var(--text-light)]">
           © {new Date().getFullYear()} Prabhani Herath
         </div>
 
       </div>
-
     </footer>
   );
 }
