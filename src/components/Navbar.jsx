@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 function Navbar() {
@@ -7,53 +8,61 @@ function Navbar() {
     setMenuOpen(false);
   };
 
+  const navItems = [
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Skills", link: "#skills" },
+    { name: "Projects", link: "#projects" },
+    { name: "Research", link: "#research" },
+    { name: "Education", link: "#education" },
+    { name: "Contact", link: "#contact" },
+  ];
+
   return (
-    <nav className="navbar">
-      <div className="nav-container">
+    <nav className="fixed left-0 top-0 z-[1000] w-full border-b border-[var(--border)] bg-[rgba(8,9,13,0.8)] backdrop-blur-[16px]">
+      <div className="mx-auto flex h-[75px] w-[92%] max-w-[1180px] items-center justify-between">
 
        
 
-        <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}   //arrow function , empty () means dosent need parameaters , 
-          aria-label="Toggle navigation"      // description of what the button does
+        {/* Desktop and Mobile Navigation */}
+        <ul
+          className={`absolute left-0 top-[75px] w-full flex-col gap-0 border-b border-[var(--border)] bg-[#0b0c11] px-0 py-2 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-[30px] md:border-0 md:bg-transparent md:p-0 ${
+            menuOpen ? "flex" : "hidden"
+          }`}
         >
-          ☰
-        </button>
-
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li>
-            <a href="#home" onClick={closeMenu}>Home</a>
-          </li>
-
-          <li>
-            <a href="#about" onClick={closeMenu}>About</a>
-          </li>
-
-          <li>
-            <a href="#skills" onClick={closeMenu}>Skills</a>
-          </li>
-
-          <li>
-            <a href="#projects" onClick={closeMenu}>Projects</a>
-          </li>
-
-          <li>
-            <a href="#research" onClick={closeMenu}>Research</a>
-          </li>
-
-          <li>
-            <a href="#education" onClick={closeMenu}>Education</a>
-          </li>
-
-          <li>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
-          </li>
+          {navItems.map((item) => (
+            <li
+              className="w-full text-center md:w-auto"
+              key={item.name}
+            >
+              <a
+                href={item.link}
+                onClick={closeMenu}
+                className="block px-4 py-[15px] text-sm text-[var(--text-light)] transition hover:text-[var(--text)] md:p-0"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        <a href="#contact" className="nav-button">
+        {/* Let's Talk Button */}
+        <a
+          href="#contact"
+          className="hidden rounded-lg border border-[var(--primary)] px-5 py-2.5 text-white transition hover:bg-[var(--primary)] md:block"
+        >
           Let's Talk
         </a>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="block border-0 bg-transparent text-[1.7rem] text-white md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
       </div>
     </nav>

@@ -1,3 +1,4 @@
+
 const projects = [
   {
     number: "01",
@@ -14,9 +15,8 @@ const projects = [
       "Sales monitoring",
     ],
     technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-     link: "https://github.com/prabhaniherath/Pharmacy-Management-System-",
+    link: "https://github.com/prabhaniherath/Pharmacy-Management-System-",
   },
-
   {
     number: "02",
     title: "Guardian AI",
@@ -31,9 +31,8 @@ const projects = [
       "Diabetes risk prediction",
     ],
     technologies: ["Python", "Pandas", "Scikit-learn", "Jupyter Notebook"],
-     link: "https://github.com/prabhaniherath/Guardian-AI-Diabetes-Prediction-System",
+    link: "https://github.com/prabhaniherath/Guardian-AI-Diabetes-Prediction-System",
   },
-
   {
     number: "03",
     title: "Nilet",
@@ -53,76 +52,101 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="section projects-section" id="projects">
+    <section
+      className="bg-[var(--bg-light)] py-[110px]"
+      id="projects"
+    >
+      <div className="mx-auto w-[90%] max-w-[1180px]">
 
-      <div className="container">
+        {/* Section Heading */}
+        <div className="mb-[50px] max-w-[700px]">
 
-        <div className="section-heading">
-
-          <p className="section-label">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[3px] text-[var(--primary-light)]">
             MY WORK
           </p>
 
-          <h2>
-            Featured <span>Projects</span>
+          <h2 className="mb-5 text-3xl font-bold text-[var(--text)] md:text-4xl">
+            Featured{" "}
+            <span className="text-[var(--primary-light)]">
+              Projects
+            </span>
           </h2>
 
-          <p>
+          <p className="text-[var(--text-light)]">
             A selection of academic and development projects that
             demonstrate my technical and problem-solving abilities.
           </p>
 
         </div>
 
-        <div className="projects-grid">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 gap-[22px] md:grid-cols-2 lg:grid-cols-3">
 
           {projects.map((project) => (
-            <article className="project-card" key={project.number}>
+            <article
+              className="relative overflow-hidden rounded-[15px] border border-[var(--border)] bg-[var(--card)] p-8 transition duration-300 hover:-translate-y-2 hover:border-[rgba(124,92,255,0.5)]"
+              key={project.number}
+            >
 
-              <div className="project-number">
+              {/* Project Number */}
+              <div className="pointer-events-none absolute right-[25px] top-5 font-['Space_Grotesk'] text-5xl font-bold text-[rgba(255,255,255,0.04)]">
                 {project.number}
               </div>
 
-              <p className="project-category">
+              {/* Project Category */}
+              <p className="relative z-10 mb-[15px] text-xs font-bold tracking-wider text-[var(--primary-light)]">
                 {project.category}
               </p>
 
-              <h3>{project.title}</h3>
+              {/* Project Title */}
+              <h3 className="relative z-10 mb-[15px] font-['Space_Grotesk'] text-xl font-semibold text-[var(--text)]">
+                {project.title}
+              </h3>
 
-              <p className="project-description">
+              {/* Description */}
+              <p className="mb-[22px] text-sm leading-relaxed text-[var(--text-light)]">
                 {project.description}
               </p>
 
-              <div className="project-features">
+              {/* Features */}
+              <div className="mb-[25px] flex flex-col gap-[7px]">
 
                 {project.features.map((feature) => (
-                  <span key={feature}>
+                  <span
+                    className="text-[0.82rem] text-[#c5c7d0]"
+                    key={feature}
+                  >
                     ✓ {feature}
                   </span>
                 ))}
 
               </div>
 
-              <div className="project-tech">
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-[7px] border-t border-[var(--border)] pt-5">
 
                 {project.technologies.map((technology) => (
-                  <span key={technology}>
+                  <span
+                    className="text-[0.72rem] text-[var(--primary-light)]"
+                    key={technology}
+                  >
                     {technology}
                   </span>
                 ))}
 
               </div>
 
+              {/* View Project Link */}
               {project.link && (
-                        <a
-                       href={project.link}
-                               target="_blank"
-                           rel="noopener noreferrer"
-                          className="project-link"
-                                  >
-                            View Project →
-                              </a>
-                                    )}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-block text-sm font-semibold text-[var(--primary-light)] transition hover:text-[var(--text)]"
+                >
+                  View Project →
+                </a>
+              )}
 
             </article>
           ))}
@@ -130,7 +154,6 @@ function Projects() {
         </div>
 
       </div>
-
     </section>
   );
 }

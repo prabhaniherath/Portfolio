@@ -1,23 +1,30 @@
+
 function Contact() {
   return (
-    <section className="section contact-section" id="contact">
+    <section
+      className="bg-[var(--bg)] py-[110px]"
+      id="contact"
+    >
+      <div className="mx-auto w-[90%] max-w-[1180px]">
 
-      <div className="container">
+        {/* Contact Wrapper */}
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
 
-        <div className="contact-wrapper">
+          {/* Contact Text */}
+          <div>
 
-          <div className="contact-text">
-
-            <p className="section-label">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[3px] text-[var(--primary-light)]">
               GET IN TOUCH
             </p>
 
-            <h2>
+            <h2 className="mb-[25px] font-['Space_Grotesk'] text-4xl font-bold leading-tight text-[var(--text)] md:text-5xl">
               Let's build something
-              <span> amazing together.</span>
+              <span className="block text-[var(--primary)]">
+                amazing together.
+              </span>
             </h2>
 
-            <p>
+            <p className="text-[var(--text-light)]">
               I am open to software engineering opportunities,
               internships, collaborations and exciting projects.
               Feel free to reach out.
@@ -25,62 +32,87 @@ function Contact() {
 
           </div>
 
-          <div className="contact-cards">
+          {/* Contact Cards */}
+          <div className="flex flex-col gap-3">
 
+            {/* Email */}
             <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-card"
-                      >
-              <div className="contact-icon">✉</div>
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhanimadhubhashini@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-[18px] rounded-[10px] border border-[var(--border)] bg-[var(--card)] px-5 py-[18px] transition duration-300 hover:translate-x-[5px] hover:border-[rgba(124,92,255,0.5)]"
+            >
+              <div className="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-lg bg-[rgba(124,92,255,0.1)] font-bold text-[var(--primary-light)]">
+                ✉
+              </div>
 
-              <div>
-                <small>Email</small>
-                <strong>
+              <div className="min-w-0">
+                <small className="mb-0.5 block text-[0.7rem] text-[var(--text-light)]">
+                  Email
+                </small>
+
+                <strong className="block break-all text-[0.85rem] text-[var(--text)]">
                   prabhanimadhubhashini@gmail.com
                 </strong>
               </div>
             </a>
 
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/prabhani-herath-a80989372"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-card"
+              className="flex items-center gap-[18px] rounded-[10px] border border-[var(--border)] bg-[var(--card)] px-5 py-[18px] transition duration-300 hover:translate-x-[5px] hover:border-[rgba(124,92,255,0.5)]"
             >
-              <div className="contact-icon">in</div>
+              <div className="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-lg bg-[rgba(124,92,255,0.1)] font-bold text-[var(--primary-light)]">
+                in
+              </div>
 
               <div>
-                <small>LinkedIn</small>
-                <strong>
+                <small className="mb-0.5 block text-[0.7rem] text-[var(--text-light)]">
+                  LinkedIn
+                </small>
+
+                <strong className="block text-[0.85rem] text-[var(--text)]">
                   Prabhani Herath
                 </strong>
               </div>
             </a>
 
+            {/* GitHub */}
             <a
               href="https://github.com/prabhaniherath"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-card"
+              className="flex items-center gap-[18px] rounded-[10px] border border-[var(--border)] bg-[var(--card)] px-5 py-[18px] transition duration-300 hover:translate-x-[5px] hover:border-[rgba(124,92,255,0.5)]"
             >
-              <div className="contact-icon">⌘</div>
+              <div className="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-lg bg-[rgba(124,92,255,0.1)] font-bold text-[var(--primary-light)]">
+                ⌘
+              </div>
 
               <div>
-                <small>GitHub</small>
-                <strong>
+                <small className="mb-0.5 block text-[0.7rem] text-[var(--text-light)]">
+                  GitHub
+                </small>
+
+                <strong className="block text-[0.85rem] text-[var(--text)]">
                   GitHub Profile
                 </strong>
               </div>
             </a>
 
-            <div className="contact-card">
-              <div className="contact-icon">☎</div>
+            {/* Phone */}
+            <div className="flex items-center gap-[18px] rounded-[10px] border border-[var(--border)] bg-[var(--card)] px-5 py-[18px] transition duration-300 hover:translate-x-[5px] hover:border-[rgba(124,92,255,0.5)]">
+              <div className="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-lg bg-[rgba(124,92,255,0.1)] font-bold text-[var(--primary-light)]">
+                ☎
+              </div>
 
               <div>
-                <small>Phone</small>
-                <strong>
+                <small className="mb-0.5 block text-[0.7rem] text-[var(--text-light)]">
+                  Phone
+                </small>
+
+                <strong className="block text-[0.85rem] text-[var(--text)]">
                   +94 78 917 7390
                 </strong>
               </div>
@@ -91,7 +123,6 @@ function Contact() {
         </div>
 
       </div>
-
     </section>
   );
 }
